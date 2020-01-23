@@ -1,0 +1,86 @@
+.bonus
+	background: #f6f6f6
+	&__title
+		margin-bottom: 50px
+		+monSB
+		font-size: 3.6em
+	&__wrap
+		display: flex
+		justify-content: space-between
+	&__box
+		width: 32%
+		img
+			height: 100px
+			margin-bottom: 50px
+	&__text
+		font-size: 2.4em
+		line-height: 33px
+		&_b
+			margin-bottom: 25px
+			+segSB
+			font-size: 3em
+		&-box
+			position: relative
+			min-height: 255px
+			&::after, &::before
+				position: absolute
+				content: ''
+				display: block
+				width: 100%
+				height: 5px
+				background: $fisrt
+			&::after
+				bottom: -25px
+			&::before
+				top: -25px
+.special
+	max-width: 100%
+
+@media (max-width: 1199px)
+	.bonus
+		&__text
+			&-box
+				min-height: 208px
+
+@media (max-width: 991px)
+	.bonus
+		&__box
+			img
+				height: 70px
+		&__text
+			line-height: 28px
+			&-box
+				min-height: 170px
+
+@media (max-width: 767px)
+	.bonus
+		&__box
+			img
+				height: 50px
+		&__text
+			line-height: 18px
+			&-box
+				min-height: 130px
+
+@media (max-width: 600px)
+	.bonus
+		&__title
+			margin-bottom: 15px
+		&__box
+			img
+				margin-bottom: 25px
+				height: 35px
+		&__text
+			line-height: 12px
+			&_b
+				margin-bottom: 9px
+			&-box
+				min-height: 130px
+				&::before
+					top: -15px
+				&::after
+					display: none
+
+@media (max-width: 330px)
+	.special
+		max-width: 70px
