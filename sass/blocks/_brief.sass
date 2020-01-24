@@ -1,0 +1,104 @@
+.brief
+    background: #f3f3f3
+    &__title
+        +monSB
+        font-size: 3.6em
+    &__box
+        margin: auto
+        margin-top: 50px
+        text-align: center
+        &:nth-child(1)
+            width: 90%
+        &:nth-child(2)
+            width: 80%
+        &:nth-child(3)
+            width: 88%
+    &__num
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100px
+        height: 100px
+        margin: auto
+        margin-bottom: 20px
+        +monSB
+        font-size: 7.2em
+        color: $fisrt
+        background: #ffffff
+        border-radius: 50%
+    &__text
+        font-size: 2.4em
+        line-height: 2em
+        a
+            position: relative
+            +segSB
+            text-decoration: nome
+            color: #00aeff
+            &::before
+                content: ''
+                position: absolute
+                bottom: -2px
+                left: 0
+                width: 100%
+                height: 2px
+                background: #00aeff
+            &:hover
+                text-decoration: none
+        span
+            +segSB
+            color: $fisrt
+        &_m
+            position: relative
+            margin-top: 70px
+            padding: 50px
+            text-align: center
+            border: 1px solid #7c7c7c
+            border-radius: 30px
+            &::before
+                content: ''
+                position: absolute
+                top: -25px
+                left: 50%
+                width: 50px
+                height: 50px
+                transform: translateX(-50%)
+                background: #ffffff url('../img/1.png') center no-repeat
+                background-size: 50%
+                border-radius: 50%
+
+
+    
+@media (max-width: 1199px)
+    .brief
+        &__box
+            &:nth-child(1)
+                width: 75%
+            &:nth-child(2)
+                width: 70%
+            &:nth-child(3)
+                width: 72%
+    
+@media (max-width: 991px)
+    .brief
+        &__num
+            height: 80px
+            width: 80px
+
+@media (max-width: 600px)
+    .brief
+        &__box
+            margin-top: 20px
+        &__num
+            height: 40px
+            width: 40px
+        &__text
+            &_m
+                padding: 25px
+                &::before
+                    top: -15px
+                    height: 30px
+                    width: 30px
+                    background-size: 30%
+
+            
+        
