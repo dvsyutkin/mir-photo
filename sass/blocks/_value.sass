@@ -1,0 +1,89 @@
+.value
+    &__box
+        margin-left: 110px
+        max-width: 100%
+    &__title
+        margin-bottom: 70px
+        +monSB
+        font-size: 3.6em
+    &__list
+        &-title
+            margin-bottom: 40px
+            +segSB
+            font-size: 3em
+    &__item
+        position: relative
+        margin-left: 100px
+        font-size: 2.4em
+        span
+            +segSB
+            color: $fisrt
+        &:nth-child(2)
+            margin-top: 25px
+            margin-bottom: 25px
+        &::before
+            position: absolute
+            content: ''
+            top: 15px
+            left: -70px
+            width: 40px
+            height: 40px
+            transform: translateY(-50%)
+            background: url(../img/check-mark.png)center no-repeat
+            background-size: contain
+            
+
+@media (max-width: 1999px)
+    .value
+        &__box
+            margin-left: 150px
+        &__item
+            &::before
+                top: 10px
+                left: -50px
+                width: 30px
+                height: 30px
+
+
+@media (max-width: 991px)
+    .value
+        &__title
+            margin-bottom: 45px
+
+@media (max-width: 767px)
+    .value
+        &__title
+            max-width: 420px
+            margin: auto
+            margin-bottom: 20px
+        &__box
+            margin-left: 0
+        &__item
+            &::before
+
+@media (max-width: 600px)
+    .value
+        &__title
+            margin-bottom: 30px
+        &__box
+            margin: 0
+        &__item
+            margin-left: 50px
+            &::before
+                top: 5px
+                left: -35px
+                width: 25px
+                height: 25px
+            &:nth-child(2)
+                margin-top: 15px
+                margin-bottom: 15px
+
+@media (max-width: 330px)
+    .value
+        &__title
+            max-width: 250px
+        &__box
+        &__item
+            margin-left: 35px
+            &::before
+            &:nth-child(2)
